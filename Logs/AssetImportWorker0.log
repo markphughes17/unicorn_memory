@@ -1,0 +1,386 @@
+Unity Editor version:    2021.3.18f1 (3129e69bc0c7)
+Branch:                  2021.3/staging
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 13.3.1 (Build 22E261)
+Darwin version:          22.4.0
+Architecture:            x86_64
+Running under Rosetta:   NO
+Available memory:        16384 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/mark/UnityProjects/UnicornMemory
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60171
+Successfully changed project path to: /Users/mark/UnityProjects/UnicornMemory
+/Users/mark/UnityProjects/UnicornMemory
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [140704486122304] Host "[IP] 192.168.1.175 [Port] 0 [Flags] 2 [Guid] 2134682189 [EditorId] 2134682189 [Version] 1048832 [Id] OSXEditor(0,Marks-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [140704486122304] Host "[IP] 192.168.1.175 [Port] 0 [Flags] 2 [Guid] 2134682189 [EditorId] 2134682189 [Version] 1048832 [Id] OSXEditor(0,Marks-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 134.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.18f1 (3129e69bc0c7)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/mark/UnityProjects/UnicornMemory/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 645 (low power)
+Metal devices available: 1
+0: Intel(R) Iris(TM) Plus Graphics 645 (low power)
+Using device Intel(R) Iris(TM) Plus Graphics 645 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 645
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56507
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.18f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.18f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.18f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2021.3.18f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006140 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 185 ms
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 137.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.501 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1502ms)
+		BeginReloadAssembly (137ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1176ms)
+			LoadAssemblies (141ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (208ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (822ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (460ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (137ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (153ms)
+				ProcessInitializeOnLoadMethodAttributes (69ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009774 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/mark/UnityProjects/UnicornMemory/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mark/UnityProjects/UnicornMemory/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 157.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.223 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2224ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (17ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1862ms)
+			LoadAssemblies (151ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (462ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (140ms)
+			SetupLoadedEditorAssemblies (898ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (66ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (158ms)
+				BeforeProcessingInitializeOnLoad (170ms)
+				ProcessInitializeOnLoadAttributes (421ms)
+				ProcessInitializeOnLoadMethodAttributes (78ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.20 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3733 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 41 unused Assets / (169.5 KB). Loaded Objects now: 4188.
+Memory consumption went from 137.0 MB to 136.8 MB.
+Total: 5.749123 ms (FindLiveObjects: 0.485047 ms CreateObjectMapping: 0.404605 ms MarkObjects: 4.598210 ms  DeleteObjects: 0.260029 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 721169.749330 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e24c38ded777c6eac716cf6ee885caa1') in 0.011748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.684062 seconds.
+  path: Assets/Scenes/MenuScene.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MenuScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e8f37057b23d2c831ebc98232f1db53') in 0.001116 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 7.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (147.3 KB). Loaded Objects now: 4188.
+Memory consumption went from 61.9 MB to 61.8 MB.
+Total: 25.177057 ms (FindLiveObjects: 0.625139 ms CreateObjectMapping: 0.360625 ms MarkObjects: 23.911413 ms  DeleteObjects: 0.278376 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 28 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (149.0 KB). Loaded Objects now: 4188.
+Memory consumption went from 61.9 MB to 61.8 MB.
+Total: 5.719647 ms (FindLiveObjects: 0.524606 ms CreateObjectMapping: 0.314788 ms MarkObjects: 4.617072 ms  DeleteObjects: 0.262257 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004607 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image /Users/mark/UnityProjects/UnicornMemory/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image /Users/mark/UnityProjects/UnicornMemory/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.762 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2763ms)
+		BeginReloadAssembly (485ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (20ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (139ms)
+		EndReloadAssembly (2010ms)
+			LoadAssemblies (398ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (698ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (116ms)
+			SetupLoadedEditorAssemblies (771ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (77ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (143ms)
+				ProcessInitializeOnLoadAttributes (468ms)
+				ProcessInitializeOnLoadMethodAttributes (79ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 11.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3728 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (147.2 KB). Loaded Objects now: 4191.
+Memory consumption went from 136.5 MB to 136.4 MB.
+Total: 6.761500 ms (FindLiveObjects: 0.411179 ms CreateObjectMapping: 0.282843 ms MarkObjects: 5.771219 ms  DeleteObjects: 0.294910 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 207.951424 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone.png
+  artifactKey: Guid(62ce01ddca719d34ea9648c586a7cc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone.png using Guid(62ce01ddca719d34ea9648c586a7cc94) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: '8e2d6549bf93c915b9c4293c640f4d14') in 1.627132 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000481 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone_Influence@2x.png
+  artifactKey: Guid(7395bf0bc3cc40e4ab2dda5ec6832261) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone_Influence@2x.png using Guid(7395bf0bc3cc40e4ab2dda5ec6832261) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'd738dbdb5a17f7c7776e7501541277ef') in 0.032103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone@3x.png
+  artifactKey: Guid(76beef9fdae7b48468ddf07d0400a374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone@3x.png using Guid(76beef9fdae7b48468ddf07d0400a374) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: '469f89c2e2f81dff265cc3730aff174e') in 0.038113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Bone_Influence@2x.png
+  artifactKey: Guid(0779ad3feec52124e97114bcbb12ef13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Bone_Influence@2x.png using Guid(0779ad3feec52124e97114bcbb12ef13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: '054dcd838fcc279a3d7b29a91dd4e235') in 0.018402 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000112 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Bone_Influence.png
+  artifactKey: Guid(ff00345da0563d641903c5bd5bb748a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Selected/Bone_Influence.png using Guid(ff00345da0563d641903c5bd5bb748a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: '213c9b4c11a8be264dcb009dfe0e7cec') in 0.027413 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCapLine.psd
+  artifactKey: Guid(0d9a36012a224080966c7b55896aa0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCapLine.psd using Guid(0d9a36012a224080966c7b55896aa0f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd833577152705d4a7c166176ec0af02') in 0.893590 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone_Influence.png
+  artifactKey: Guid(e92fc44f12c21dd44a49e390f39f7ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light/Bone_Influence.png using Guid(e92fc44f12c21dd44a49e390f39f7ffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+ -> (artifact id: 'b5d7656146f282a4d79a349250392d01') in 0.035799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignJustified.psd
+  artifactKey: Guid(92027f7f8cfc4feaa477da0dc38d3d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignJustified.psd using Guid(92027f7f8cfc4feaa477da0dc38d3d46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f02e0d3f37518d150595363cce997404') in 0.011743 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.001603 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo.psd
+  artifactKey: Guid(c76700ea0062413d9f69409b4e9e151b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo.psd using Guid(c76700ea0062413d9f69409b4e9e151b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f57ce8820560be1c8d5c1f426bb7b6d') in 0.010304 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo_Light.psd
+  artifactKey: Guid(35ff0937876540d3bd4b6a941df62a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenterGeo_Light.psd using Guid(35ff0937876540d3bd4b6a941df62a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c9c8e5a4158a67cc0c18c6f38b46c4') in 0.013268 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000994 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBottom_Light.psd
+  artifactKey: Guid(585b70cb75dd43efbfead809c30a1731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBottom_Light.psd using Guid(585b70cb75dd43efbfead809c30a1731) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f5015b934bd66a79b7a5b5881cdf480') in 0.011789 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenter_Light.psd
+  artifactKey: Guid(6ace62d30f494c948b71d5594afce11d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignCenter_Light.psd using Guid(6ace62d30f494c948b71d5594afce11d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1197aeeef156956be2f8f29a94af05a') in 0.016527 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBaseLine.psd
+  artifactKey: Guid(8bc445bb79654bf496c92d0407840a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.textmeshpro/Editor Resources/Textures/btn_AlignBaseLine.psd using Guid(8bc445bb79654bf496c92d0407840a92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb82aa57d68835f8c0dd30e2d84fc23') in 0.012840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.470694 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(d75b7bddeef3a4bf8be034da1e44e010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(d75b7bddeef3a4bf8be034da1e44e010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a31dfd9c77545940e2b85fc0f0db9f5') in 0.004507 seconds 
