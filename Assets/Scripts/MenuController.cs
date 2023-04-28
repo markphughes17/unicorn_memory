@@ -12,7 +12,7 @@ public class MenuController : MonoBehaviour
     }
 
     public void EasyGame() {
-        //TODO Easy scene
+        SceneManager.LoadScene("EasyGameScene");
     }
 
     public void MedGame() {

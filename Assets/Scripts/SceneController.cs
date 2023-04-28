@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
     public const int gridRows = 3;
@@ -14,22 +15,39 @@ public class SceneController : MonoBehaviour {
     private MemoryCard _firstRevealed;
     private MemoryCard _secondRevealed;
     private int turns;
+    private int cardsLeft;
     public enum Level {
         Easy,
         Medium,
         Hard
     }
-    
+
+    [SerializeField] private GameObject cardDeck;
     [SerializeField] private MemoryCard originalCard;
     [SerializeField] private Sprite[] images;
     [SerializeField] private TMP_Text turnsValue;
+    [SerializeField] private GameObject startPanel;
+    [SerializeField] private GameObject pausedPanel;
+    [SerializeField] private GameObject endGamePanel;
+    [SerializeField] private GameObject pauseButton;
     
     void Start() {
+        startPanel.SetActive(true);
+        endGamePanel.SetActive(false);
+        pausedPanel.SetActive(false);
+        pauseButton.SetActive(false);
+    }
+
+    public void StartGame() {
         turns = 0;
+        startPanel.SetActive(false);
+        pauseButton.SetActive(true);
+        cardDeck.SetActive(true);
         Vector3 startPos = originalCard.transform.position;
         int[] easyNumbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
 
         int[] numbers = ShuffleArray(easyNumbers);
+        cardsLeft = numbers.Length;
 
         for (int i = 0; i < gridCols; i++) {
             for (int j = 0; j < gridRows; j++) {
@@ -99,10 +117,37 @@ public class SceneController : MonoBehaviour {
             _firstRevealed.Unreveal();
             _secondRevealed.Unreveal();
         }
+        else {
+            cardsLeft -= 2;
+        }
 
         turns++;
         turnsValue.text = turns.ToString();
         _firstRevealed = null;
         _secondRevealed = null;
+        if (cardsLeft == 0) {
+            GameOver();
+        }
+    }
+
+    private void GameOver() {
+        endGamePanel.SetActive(true);
+    }
+
+    public void backToMenu() {
+        SceneManager.LoadScene("MenuScene");
+    }
+
+    public void PauseGame() {
+        pausedPanel.SetActive(true);
+        cardDeck.SetActive(false);
+    }
+    public void UnPause() {
+        pausedPanel.SetActive(false);
+        cardDeck.SetActive(true);
+    }
+
+    public void Restart() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
