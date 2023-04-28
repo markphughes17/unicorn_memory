@@ -42,8 +42,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/MenuController.cs" />
-     <Compile Include="Assets/Scripts/MemoryCard.cs" />
      <Compile Include="Assets/Scripts/SceneController.cs" />
+     <Compile Include="Assets/Scripts/MemoryCard.cs" />
+     <Compile Include="Assets/Scripts/SettingsController.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />

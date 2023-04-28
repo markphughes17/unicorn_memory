@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
 
     public void Settings() {
         //TODO Settings scene
-        //SceneManager.LoadScene()
+        SceneManager.LoadScene("SettingsScene");
     }
 
     public void EasyGame() {
