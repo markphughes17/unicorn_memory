@@ -1,3 +1,8 @@
 *.keystore
 UserSettings/
 Library/
+Assets/GooglePlayGames/
+obj/
+Temp/
+Assets/ExternalDependencyManager/
+Logs/

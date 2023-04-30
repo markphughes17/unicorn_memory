@@ -30,6 +30,8 @@ public class SceneController : MonoBehaviour {
     [SerializeField] private GameObject pausedPanel;
     [SerializeField] private GameObject endGamePanel;
     [SerializeField] private GameObject pauseButton;
+
+    private LeaderBoardController _leaderBoardController;
     
     void Start() {
         startPanel.SetActive(true);
@@ -132,6 +134,14 @@ public class SceneController : MonoBehaviour {
 
     private void GameOver() {
         endGamePanel.SetActive(true);
+        if (PlayerPrefs.GetInt("PlayAuthenticated") == 1) {
+            Social.ReportProgress(_leaderBoardController.GetAchievementID(level), 100f, (bool success) => {
+                // handle success or failure
+            });
+            Social.ReportScore(turns, _leaderBoardController.GetLeaderboardID(level), (bool success) => {
+                // handle success or failure
+            });
+        }
     }
 
     public void backToMenu() {

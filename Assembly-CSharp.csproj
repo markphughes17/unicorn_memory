@@ -45,11 +45,15 @@
      <Compile Include="Assets/Scripts/SceneController.cs" />
      <Compile Include="Assets/Scripts/MemoryCard.cs" />
      <Compile Include="Assets/Scripts/SettingsController.cs" />
+     <Compile Include="Assets/Scripts/LeaderBoardController.cs" />
+     <Compile Include="Assets/GPGSIds.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets/TextMesh Pro/Sprites" />
+     <None Include="Assets/GooglePlayGames/com.google.play.games/Proguard/games.txt" />
      <Folder Include="Assets/TextMesh Pro/Resources/Sprite Assets" />
+     <None Include="Assets/GooglePlayGames/com.google.play.games/package.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
      <Folder Include="Assets/Fonts/peacesans" />
      <Folder Include="Assets/Scripts" />
@@ -60,12 +64,15 @@
      <Folder Include="Assets/TextMesh Pro/Resources" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/TextMesh Pro" />
+     <Folder Include="Assets/GooglePlayGames/com.google.play.games" />
      <Folder Include="Assets/Fonts" />
      <Folder Include="Assets/Sprites" />
      <Folder Include="Assets/2D Casual UI/Sprite" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+     <Folder Include="Assets/ExternalDependencyManager" />
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+     <Folder Include="Assets/GooglePlayGames/com.google.play.games/Proguard" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
@@ -76,6 +83,7 @@
      <Folder Include="Assets/TextMesh Pro/Fonts" />
      <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+     <Folder Include="Assets/GooglePlayGames" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
@@ -842,6 +850,14 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Google.Play.Games.Editor.csproj">
+      <Project>{b5675d84-7154-d8cb-3840-a727dd61e975}</Project>
+      <Name>Google.Play.Games.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.Play.Games.csproj">
+      <Project>{574ffc35-889d-234a-b8b0-357567f93432}</Project>
+      <Name>Google.Play.Games</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

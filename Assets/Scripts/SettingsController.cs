@@ -7,7 +7,7 @@ public class SettingsController : MonoBehaviour
 {
 
     public void ToLeaderboards() {
-        //TODO leaderboards
+        SceneManager.LoadScene("LeaderboardsScene");
     }
 
     public void ToPrivacy() {
