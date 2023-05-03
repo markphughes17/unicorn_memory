@@ -41,9 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <None Include="Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.169_manifest.txt" />
-     <Folder Include="Assets/ExternalDependencyManager/Editor/1.2.169" />
      <Folder Include="Assets/ExternalDependencyManager/Editor" />
+     <None Include="Assets/ExternalDependencyManager/Editor/external-dependency-manager_version-1.2.175_manifest.txt" />
+     <Folder Include="Assets/ExternalDependencyManager/Editor/1.2.175" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.18f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

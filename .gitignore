@@ -1,7 +1,9 @@
 *.keystore
 UserSettings/
 Library/
+Assets/GoogleMobileAds/
 Assets/GooglePlayGames/
+Assets/Plugins/
 obj/
 Temp/
 Assets/ExternalDependencyManager/

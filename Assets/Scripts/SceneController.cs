@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class SceneController : MonoBehaviour {
     public const int gridRows = 3;
@@ -30,9 +32,10 @@ public class SceneController : MonoBehaviour {
     [SerializeField] private GameObject pausedPanel;
     [SerializeField] private GameObject endGamePanel;
     [SerializeField] private GameObject pauseButton;
+    [SerializeField] private AdController adController;
 
     private LeaderBoardController _leaderBoardController;
-    
+
     void Start() {
         startPanel.SetActive(true);
         endGamePanel.SetActive(false);
@@ -132,6 +135,7 @@ public class SceneController : MonoBehaviour {
         }
     }
 
+    // ReSharper disable Unity.PerformanceAnalysis
     private void GameOver() {
         endGamePanel.SetActive(true);
         if (PlayerPrefs.GetInt("PlayAuthenticated") == 1) {
@@ -142,6 +146,13 @@ public class SceneController : MonoBehaviour {
                 // handle success or failure
             });
         }
+
+        int rand = Random.Range(0, 2);
+        if (rand == 1) {
+            adController.ShowInterstitialAd();
+        }
+        Debug.Log(rand.ToString());
+
     }
 
     public void backToMenu() {
