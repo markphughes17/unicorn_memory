@@ -51,7 +51,7 @@ public class SceneController : MonoBehaviour {
         Vector3 startPos = originalCard.transform.position;
         
 
-        int[] numbers = ShuffleArray(level);
+        int[] numbers = ShuffleArray();
         cardsLeft = numbers.Length;
 
         for (int i = 0; i < gridCols; i++) {
@@ -85,6 +85,24 @@ public class SceneController : MonoBehaviour {
                     float posY = -(offsetY * j) + startPos.y;
                     card.transform.SetParent(originalCard.transform.parent);
                     card.transform.position = new Vector3(posX, posY, startPos.z);
+                } else if (level == Level.Medium) {
+                    if (i == 0 && j == 0) {
+                        card = originalCard;
+                    }
+                    else {
+                        card = Instantiate(originalCard);
+                    }
+
+                    
+                    int index = j * gridCols + i;
+                    int id = numbers[index];
+                    card.SetCard(id, images[id]);
+
+                    float posX = (offsetX * i) + startPos.x;
+                    float posY = -(offsetY * j) + startPos.y;
+                    card.transform.SetParent(originalCard.transform.parent);
+                    card.transform.position = new Vector3(posX, posY, startPos.z);
+                    
                 } else if (level == Level.Hard) {
                     if (i == 0 && j == 0) {
                         card = originalCard;
@@ -118,12 +136,15 @@ public class SceneController : MonoBehaviour {
         }
     }
 
-    private int[] ShuffleArray(Level level) {
+    private int[] ShuffleArray() {
         int[] easyNumbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
+        int[] medNumbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7 };
         int[] hardNumbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11 };
         int[] newArray;
         if (level == Level.Easy) {
             newArray = easyNumbers.Clone() as int[];
+        } else if (this.level == Level.Medium) {
+            newArray = medNumbers.Clone() as int[];
         }
         else {
             newArray = hardNumbers.Clone() as int[];

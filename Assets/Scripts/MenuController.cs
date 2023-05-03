@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine;
@@ -22,11 +20,11 @@ public class MenuController : MonoBehaviour
     }
 
     public void MedGame() {
-        //TODO Medium scene
+        SceneManager.LoadScene("MedGameScene");
     }
 
     public void HardGame() {
-        //TODO Hard scene
+        SceneManager.LoadScene("HardGameScene");
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
