@@ -57,21 +57,22 @@ public class SceneController : MonoBehaviour {
         for (int i = 0; i < gridCols; i++) {
             for (int j = 0; j < gridRows; j++) {
                 MemoryCard card;
-                if (level == Level.Easy) {
-                    if (i == 0 && j == 0) {
-                        card = originalCard;
-                    }
-                    else {
-                        card = Instantiate(originalCard);
-                    }
+                
+                if (i == 0 && j == 0) {
+                    card = originalCard;
+                }
+                else {
+                    card = Instantiate(originalCard);
+                }
 
+                if (level != Level.Medium) {
                     if (i == (gridCols - 1) / 2 && j == (gridRows - 1) / 2) {
-                        card.SetCard(4, images[4]);
+                        card.SetCard(images.Length-1, images[^1]);
                         GameObject back = card.transform.GetChild(0).gameObject;
                         back.SetActive(false);
                     } else {
                         int index = j * gridCols + i;
-                        if (index < 5) {
+                        if (index < images.Length) {
                             int id = numbers[index];
                             card.SetCard(id, images[id]);
                         }
@@ -79,59 +80,18 @@ public class SceneController : MonoBehaviour {
                             int id = numbers[index-1];
                             card.SetCard(id, images[id]);
                         }
-                    }
-
-                    float posX = (offsetX * i) + startPos.x;
-                    float posY = -(offsetY * j) + startPos.y;
-                    card.transform.SetParent(originalCard.transform.parent);
-                    card.transform.position = new Vector3(posX, posY, startPos.z);
-                } else if (level == Level.Medium) {
-                    if (i == 0 && j == 0) {
-                        card = originalCard;
-                    }
-                    else {
-                        card = Instantiate(originalCard);
-                    }
-
-                    
+                }
+                
+                } else {
                     int index = j * gridCols + i;
                     int id = numbers[index];
                     card.SetCard(id, images[id]);
 
-                    float posX = (offsetX * i) + startPos.x;
-                    float posY = -(offsetY * j) + startPos.y;
-                    card.transform.SetParent(originalCard.transform.parent);
-                    card.transform.position = new Vector3(posX, posY, startPos.z);
-                    
-                } else if (level == Level.Hard) {
-                    if (i == 0 && j == 0) {
-                        card = originalCard;
-                    }
-                    else {
-                        card = Instantiate(originalCard);
-                    }
-
-                    if (i == (gridCols - 1) / 2 && j == (gridRows - 1) / 2) {
-                        card.SetCard(12, images[12]);
-                        GameObject back = card.transform.GetChild(0).gameObject;
-                        back.SetActive(false);
-                    } else {
-                        int index = j * gridCols + i;
-                        if (index < 13) {
-                            int id = numbers[index];
-                            card.SetCard(id, images[id]);
-                        }
-                        else {
-                            int id = numbers[index-1];
-                            card.SetCard(id, images[id]);
-                        }
-                    }
-
-                    float posX = (offsetX * i) + startPos.x;
-                    float posY = -(offsetY * j) + startPos.y;
-                    card.transform.SetParent(originalCard.transform.parent);
-                    card.transform.position = new Vector3(posX, posY, startPos.z);
                 }
+                float posX = (offsetX * i) + startPos.x;
+                float posY = -(offsetY * j) + startPos.y;
+                card.transform.SetParent(originalCard.transform.parent);
+                card.transform.position = new Vector3(posX, posY, startPos.z);
             }
         }
     }
@@ -196,6 +156,7 @@ public class SceneController : MonoBehaviour {
     // ReSharper disable Unity.PerformanceAnalysis
     private void GameOver() {
         endGamePanel.SetActive(true);
+        pauseButton.SetActive(false);
         if (PlayerPrefs.GetInt("PlayAuthenticated") == 1) {
             Social.ReportProgress(_leaderBoardController.GetAchievementID(level), 100f, (bool success) => {
                 // handle success or failure
