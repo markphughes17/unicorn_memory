@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class SceneController : MonoBehaviour {
-    public const int gridRows = 3;
-    public const int gridCols = 3;
-    public const float offsetX = 3f;
-    public const float offsetY =4f;
+    public int gridRows = 3;
+    public int gridCols = 3;
+    public float offsetX = 3f;
+    public float offsetY =4f;
 
     public Level level = Level.Easy;
 
@@ -49,9 +49,9 @@ public class SceneController : MonoBehaviour {
         pauseButton.SetActive(true);
         cardDeck.SetActive(true);
         Vector3 startPos = originalCard.transform.position;
-        int[] easyNumbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
+        
 
-        int[] numbers = ShuffleArray(easyNumbers);
+        int[] numbers = ShuffleArray(level);
         cardsLeft = numbers.Length;
 
         for (int i = 0; i < gridCols; i++) {
@@ -85,13 +85,50 @@ public class SceneController : MonoBehaviour {
                     float posY = -(offsetY * j) + startPos.y;
                     card.transform.SetParent(originalCard.transform.parent);
                     card.transform.position = new Vector3(posX, posY, startPos.z);
+                } else if (level == Level.Hard) {
+                    if (i == 0 && j == 0) {
+                        card = originalCard;
+                    }
+                    else {
+                        card = Instantiate(originalCard);
+                    }
+
+                    if (i == (gridCols - 1) / 2 && j == (gridRows - 1) / 2) {
+                        card.SetCard(12, images[12]);
+                        GameObject back = card.transform.GetChild(0).gameObject;
+                        back.SetActive(false);
+                    } else {
+                        int index = j * gridCols + i;
+                        if (index < 13) {
+                            int id = numbers[index];
+                            card.SetCard(id, images[id]);
+                        }
+                        else {
+                            int id = numbers[index-1];
+                            card.SetCard(id, images[id]);
+                        }
+                    }
+
+                    float posX = (offsetX * i) + startPos.x;
+                    float posY = -(offsetY * j) + startPos.y;
+                    card.transform.SetParent(originalCard.transform.parent);
+                    card.transform.position = new Vector3(posX, posY, startPos.z);
                 }
             }
         }
     }
 
-    private int[] ShuffleArray(int[] numbers) {
-        int[] newArray = numbers.Clone() as int[];
+    private int[] ShuffleArray(Level level) {
+        int[] easyNumbers = { 0, 0, 1, 1, 2, 2, 3, 3 };
+        int[] hardNumbers = { 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11 };
+        int[] newArray;
+        if (level == Level.Easy) {
+            newArray = easyNumbers.Clone() as int[];
+        }
+        else {
+            newArray = hardNumbers.Clone() as int[];
+        }
+        
         for (int i = 0; i < newArray.Length; i++) {
             int tmp = newArray[i];
             int r = Random.Range(i, newArray.Length);

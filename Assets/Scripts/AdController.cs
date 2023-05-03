@@ -1,27 +1,27 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using GoogleMobileAds.Api;
 using UnityEngine;
 
 public class AdController : MonoBehaviour {
     private const string BannerAdUnitId = "ca-app-pub-3940256099942544/6300978111";
     private const string InterstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";
-    private const string OpenAdUnitId = "ca-app-pub-3940256099942544/3419835294";
+    //private const string OpenAdUnitId = "ca-app-pub-3940256099942544/3419835294";
     
-    private static AdController instance;
-    private bool isShowingAd = false;
+    private static AdController _instance;
 
     private BannerView _bannerView;
     private InterstitialAd _interstitialAd; 
 
     void Awake() {
-        MobileAds.Initialize(initStatus => { });
+        MobileAds.Initialize(_ => { });
         MobileAds.RaiseAdEventsOnUnityMainThread = true;
+        
     }
     void Start() {
         RequestBanner();
         LoadInterstitialAd();
+        RegisterEventHandlers(_interstitialAd);
+        RegisterReloadHandler(_interstitialAd);
     }
 
     public void RequestBanner() {
@@ -82,7 +82,7 @@ public class AdController : MonoBehaviour {
 
         // send the request to load the ad.
         InterstitialAd.Load(InterstitialAdUnitId, adRequest,
-            (InterstitialAd ad, LoadAdError error) =>
+            (ad, error) =>
             {
                 // if error is not null, the load request failed.
                 if (error != null || ad == null)
