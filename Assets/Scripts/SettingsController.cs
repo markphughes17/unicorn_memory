@@ -1,11 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class SettingsController : MonoBehaviour
-{
+public class SettingsController : MonoBehaviour {
+    [SerializeField] private Toggle toggle;
 
+    void Start() {
+        toggle.isOn = PlayerPrefs.GetInt("sounds") == 1;
+    }
+    
     public void ToLeaderboards() {
         SceneManager.LoadScene("LeaderboardsScene");
     }
@@ -19,6 +22,7 @@ public class SettingsController : MonoBehaviour
     }
 
     public void ToggleSound() {
-        //TODO sounds
+        PlayerPrefs.SetInt("sounds", toggle.isOn ? 1 : 0);
+        Debug.Log("sounds changed to " + toggle.isOn);
     }
 }

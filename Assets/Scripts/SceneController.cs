@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,8 +14,8 @@ public class SceneController : MonoBehaviour {
 
     private MemoryCard _firstRevealed;
     private MemoryCard _secondRevealed;
-    private int turns;
-    private int cardsLeft;
+    private int _turns;
+    private int _cardsLeft;
     public enum Level {
         Easy,
         Medium,
@@ -33,6 +31,7 @@ public class SceneController : MonoBehaviour {
     [SerializeField] private GameObject endGamePanel;
     [SerializeField] private GameObject pauseButton;
     [SerializeField] private AdController adController;
+    [SerializeField] private AudioSource audioSource;
 
     private LeaderBoardController _leaderBoardController;
 
@@ -41,10 +40,11 @@ public class SceneController : MonoBehaviour {
         endGamePanel.SetActive(false);
         pausedPanel.SetActive(false);
         pauseButton.SetActive(false);
+        audioSource.mute = PlayerPrefs.GetInt("sounds") == 0;
     }
 
     public void StartGame() {
-        turns = 0;
+        _turns = 0;
         startPanel.SetActive(false);
         pauseButton.SetActive(true);
         cardDeck.SetActive(true);
@@ -52,7 +52,7 @@ public class SceneController : MonoBehaviour {
         
 
         int[] numbers = ShuffleArray();
-        cardsLeft = numbers.Length;
+        _cardsLeft = numbers.Length;
 
         for (int i = 0; i < gridCols; i++) {
             for (int j = 0; j < gridRows; j++) {
@@ -90,8 +90,9 @@ public class SceneController : MonoBehaviour {
                 }
                 float posX = (offsetX * i) + startPos.x;
                 float posY = -(offsetY * j) + startPos.y;
-                card.transform.SetParent(originalCard.transform.parent);
-                card.transform.position = new Vector3(posX, posY, startPos.z);
+                Transform transform1;
+                (transform1 = card.transform).SetParent(originalCard.transform.parent);
+                transform1.position = new Vector3(posX, posY, startPos.z);
             }
         }
     }
@@ -110,7 +111,7 @@ public class SceneController : MonoBehaviour {
             newArray = hardNumbers.Clone() as int[];
         }
         
-        for (int i = 0; i < newArray.Length; i++) {
+        for (int i = 0; i < newArray!.Length; i++) {
             int tmp = newArray[i];
             int r = Random.Range(i, newArray.Length);
             newArray[i] = newArray[r];
@@ -120,7 +121,7 @@ public class SceneController : MonoBehaviour {
         return newArray;
     }
 
-    public bool canReveal {
+    public bool CanReveal {
         get { return _secondRevealed == null; }
     }
 
@@ -141,14 +142,16 @@ public class SceneController : MonoBehaviour {
             _secondRevealed.Unreveal();
         }
         else {
-            cardsLeft -= 2;
+            _cardsLeft -= 2;
+            _firstRevealed.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.3f);
+            _secondRevealed.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.3f);
         }
 
-        turns++;
-        turnsValue.text = turns.ToString();
+        _turns++;
+        turnsValue.text = _turns.ToString();
         _firstRevealed = null;
         _secondRevealed = null;
-        if (cardsLeft == 0) {
+        if (_cardsLeft == 0) {
             GameOver();
         }
     }
@@ -158,10 +161,10 @@ public class SceneController : MonoBehaviour {
         endGamePanel.SetActive(true);
         pauseButton.SetActive(false);
         if (PlayerPrefs.GetInt("PlayAuthenticated") == 1) {
-            Social.ReportProgress(_leaderBoardController.GetAchievementID(level), 100f, (bool success) => {
+            Social.ReportProgress(_leaderBoardController.GetAchievementID(level), 100f, (success) => {
                 // handle success or failure
             });
-            Social.ReportScore(turns, _leaderBoardController.GetLeaderboardID(level), (bool success) => {
+            Social.ReportScore(_turns, _leaderBoardController.GetLeaderboardID(level), (success) => {
                 // handle success or failure
             });
         }
@@ -174,7 +177,7 @@ public class SceneController : MonoBehaviour {
 
     }
 
-    public void backToMenu() {
+    public void BackToMenu() {
         SceneManager.LoadScene("MenuScene");
     }
 

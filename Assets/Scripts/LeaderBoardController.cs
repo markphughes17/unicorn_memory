@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using GooglePlayGames;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,7 +13,7 @@ public class LeaderBoardController : MonoBehaviour {
 
     private void Awake() {
         if (!Social.localUser.authenticated) {
-            Social.localUser.Authenticate((bool success) => {
+            Social.localUser.Authenticate((success) => {
                 if (success) {
                     Social.ShowLeaderboardUI();
                 }

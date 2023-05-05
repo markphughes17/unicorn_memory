@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "940655970382",
+    "project_id": "unicorn-memory",
+    "storage_bucket": "unicorn-memory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940655970382:android:9833af5c988946d7a41b1f",
+        "android_client_info": {
+          "package_name": "com.markhughestech.unicornmemory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940655970382-173sls6aan9btcp5qppktv25n84r600t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.markhughestech.unicornmemory",
+            "certificate_hash": "112848c0900303a471b2b6afc0390e0c75e3b5b5"
+          }
+        },
+        {
+          "client_id": "940655970382-a6urbrojo5r5f8et0d03m843ck7mrpkq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.markhughestech.unicornmemory",
+            "certificate_hash": "0acb9123dcda707d1f7baebbb9f4b41a27c31ab7"
+          }
+        },
+        {
+          "client_id": "940655970382-mof48ip3vlca60lelehtgg0am1aaai01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd83rjOtHHMBQTDfs5BoLN8V5-mmMFIpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940655970382-mof48ip3vlca60lelehtgg0am1aaai01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-2450262998136031~3848331158"
+    }
+  ],
+  "configuration_version": "1"
+}

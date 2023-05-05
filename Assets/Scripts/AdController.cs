@@ -3,8 +3,8 @@ using GoogleMobileAds.Api;
 using UnityEngine;
 
 public class AdController : MonoBehaviour {
-    private const string BannerAdUnitId = "ca-app-pub-3940256099942544/6300978111";
-    private const string InterstitialAdUnitId = "ca-app-pub-3940256099942544/1033173712";
+    private const string BannerAdUnitId = "ca-app-pub-2450262998136031/9008038930";
+    private const string InterstitialAdUnitId = "ca-app-pub-2450262998136031/6765018975";
     //private const string OpenAdUnitId = "ca-app-pub-3940256099942544/3419835294";
     
     private static AdController _instance;
@@ -114,7 +114,7 @@ public class AdController : MonoBehaviour {
     private void RegisterEventHandlers(InterstitialAd ad)
     {
         // Raised when the ad is estimated to have earned money.
-        ad.OnAdPaid += (AdValue adValue) =>
+        ad.OnAdPaid += (adValue) =>
         {
             Debug.Log(String.Format("Interstitial ad paid {0} {1}.",
                 adValue.Value,
@@ -141,7 +141,7 @@ public class AdController : MonoBehaviour {
             Debug.Log("Interstitial ad full screen content closed.");
         };
         // Raised when the ad failed to open full screen content.
-        ad.OnAdFullScreenContentFailed += (AdError error) =>
+        ad.OnAdFullScreenContentFailed += (error) =>
         {
             Debug.LogError("Interstitial ad failed to open full screen content " +
                            "with error : " + error);
@@ -159,7 +159,7 @@ public class AdController : MonoBehaviour {
             LoadInterstitialAd();
         };
         // Raised when the ad failed to open full screen content.
-        ad.OnAdFullScreenContentFailed += (AdError error) =>
+        ad.OnAdFullScreenContentFailed += (error) =>
         {
             Debug.LogError("Interstitial ad failed to open full screen content " +
                            "with error : " + error);
